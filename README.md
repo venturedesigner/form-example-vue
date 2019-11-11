@@ -83,7 +83,11 @@ At the bottom of the signup, you should have two checkboxes that the user sees:
 1. Acceptance to the Terms and Conditions (mandatory)
 2. Acceptance to join the Mailing List (optional)
 
-### Bonus
+### Bonus 1
+
+Can you make a Login page with email / password too? The user should be able to toggle between signup/login at any time, but the email/pwd info should persist across the two views.
+
+### Bonus 2
 
 Can you tell the user how secure is their password?
 
