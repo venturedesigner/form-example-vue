@@ -59,7 +59,7 @@ Add a new `<input>` in your form to check your password twice. It's a common pra
 
 ### Country
 
-You need to add a select so that the user will select their country. To do that, you should load the `countries.json` file in your javascript.
+You need to add a select so that the user will select their country. To do that, you should load the `countries.js` file in your javascript.
 
 *This question is mandatory*
 

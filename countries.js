@@ -1,4 +1,4 @@
-[
+const contries = [
   {
     "name": "Afghanistan",
     "code": "AF"
