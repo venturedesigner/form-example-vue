@@ -9,7 +9,11 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous" defer></script>
   <script src="signup.js" defer></script>
-  
+  <style>
+    .red {
+      background-color: rgb(247, 180, 180);
+    }
+  </style>
 </head>
 <body>
   <div id="app">
@@ -22,6 +26,7 @@
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Password</label>
         <input v-model:value="password" type="password" class="form-control" id="exampleInputPassword1">
+        <input :class="{'red': !checkpass}" v-model:value="password2" type="password" class="form-control" id="exampleInputPassword1">
       </div>
       <div class="mb-3 form-check">
         <input type="checkbox" class="form-check-input" id="exampleCheck1">

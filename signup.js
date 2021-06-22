@@ -1,11 +1,18 @@
+
+
 const app = new Vue ({
   el: '#app',
   data: {
     email: '',
-    password: ''
+    password: '',
+    password2: ''
   },
   computed: {
-  
+    checkpass: function () {
+      if (this.password === this.password2) {
+         return true }
+      else { return false }
+    }
   },
   methods: {
     validate: function (){
