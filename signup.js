@@ -9,7 +9,9 @@ const app = new Vue ({
     countries: countries,
     pickedGender: '',
     date: '',
-    selected: ''
+    selected: '',
+    checkedTerms: false,
+    checkedMailing: false
   },
   computed: {
     checkpass: function () {
@@ -20,7 +22,7 @@ const app = new Vue ({
   },
   methods: {
     validate: function (){
-      if (this.password.length > 5) {
+      if (this.password.length > 5 && this.checkedTerms) {
         alert('You are IN!')
       } else {
         alert('Password too short')

@@ -27,7 +27,7 @@
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Password</label>
         <input v-model:value="password" type="password" class="form-control" id="exampleInputPassword1">
-        <input :class="{'red': !checkpass}" v-model:value="password2" type="password" class="form-control" id="exampleInputPassword1">
+        <input :class="{'red': !checkpass}" v-model:value="password2" type="password" class="form-control" id="exampleInputPassword2">
       </div>
 
       <div>
@@ -55,9 +55,13 @@
       </div>
 
       <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          <input type="checkbox" id="checkbox" v-model="checkedTerms">
+          <label for="checkbox"> Terms </label>
       </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" id="checkbox" v-model="checkedMailing">
+        <label for="checkbox">Mailing list</label>
+    </div>
       <button @click="validate()" type="submit" class="btn btn-primary">Sign Up</button>
     </form>
   </div>
