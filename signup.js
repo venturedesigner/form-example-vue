@@ -6,7 +6,8 @@ const app = new Vue ({
     email: '',
     password: '',
     password2: '',
-    countries: countries
+    countries: countries,
+    pickedGender: ''
   },
   computed: {
     checkpass: function () {
