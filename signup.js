@@ -1,11 +1,12 @@
-
+// import { countries } from './countries'
 
 const app = new Vue ({
   el: '#app',
   data: {
     email: '',
     password: '',
-    password2: ''
+    password2: '',
+    countries: countries
   },
   computed: {
     checkpass: function () {

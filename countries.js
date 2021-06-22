@@ -1,4 +1,4 @@
-const contries = [
+const countries = [
   {
     "name": "Afghanistan",
     "code": "AF"
