@@ -23,7 +23,7 @@ After this learning unit, you will be able to:
 
 ## Deliverables
 
-Please, push every file needed to make your app properly on GitHub before creating the pull request.
+Please, push every file needed to make your app run properly on GitHub before creating the pull request.
 
 ## Introduction
 ![](signup-example.png)
@@ -45,7 +45,7 @@ As an idea, you could you use [this login template](https://getbootstrap.com/doc
 
 ### Basic Info
 
-You should start by request the user for their `email` and `password`, and have a **Signup** button.
+You should start by requesting the user their `email` and `password`, and have a **Signup** button.
 
 Make sure they can only signup if their email is correct and the password is longer than 5 characters.
 
@@ -74,7 +74,7 @@ This should be done with radio buttons
 
 ### Birthdate
 
-We should ask our users for their birthday. Remember we don't accept any user less than 18 years old.
+We should ask our users for their birthday. Remember we don't accept any user under 18 years old.
 
 ### Terms and Conditions check
 
