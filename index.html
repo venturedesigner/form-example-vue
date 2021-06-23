@@ -15,89 +15,111 @@
       display: none;
     }
     .validation {
-      color: red;
+      color: #ffc800;
       display: inline-block;
     }
     .red {
       background-color: rgb(247, 180, 180);
     }
+    .container {
+      max-width: 360px;
+      margin-top: 120px;
+      border: 1px solid #fff0;
+      border-radius: 10px;
+      padding: 42px;
+      background-color: #00000078;
+    }
+    #select {
+      width: 100%;
+      max-width: 100%;
+      height: 40px;
+      border: solid 1px #dcdcdc;
+      border-radius: 5px;
+    }
+    body {
+      background-image: url(https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80);
+    color: white;
+    }
   </style>
 </head>
 <body>
   <div id="app">
-    <form>
+    <div class="container">
 
-      <!-- Email input -->
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input v-model.lazy:value="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text hide" :class="{'validation': !validateEmail}">Please provide valid email</div>
-      </div>
-
-      <!-- Password input -->
-      <div class="mb-3">
-        
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-
-        <input v-model:value="password" type="password" class="form-control" id="exampleInputPassword1">
-        <div class="form-text hide" :class="{'validation': !passwordLength}">Password should be maore than 5 characters long</div>
-        <br>
-        <label for="exampleInputPassword2" class="form-label">Re-type Password</label>
-        <input v-model:value="password2" type="password" class="form-control" id="exampleInputPassword2">
-        <div class="form-text hide" :class="{'validation': !passwordMatch}">Passwords should be the same</div>
-
-      </div>
-
-      <!-- Country input -->
-      <label for="country" class="form-label">Where are you from?</label>
-      <div id="country">
-        <select v-model="selected">
-          <option selected="selected" disabled>Select Country</option>
-          <option v-for="(value, idx) in countries" :key="idx">{{ value.name }}</option>
-        </select>
-      </div>
-      <br>
-
-      <!-- Gender input -->
-      <label for="gender" class="form-label">Gender</label>
-      <div id="gender">
-        <input type="radio" id="Male" value="Male" v-model="pickedGender">
-        <label for="Male">Male</label>
-
-        <input type="radio" id="Female" value="Female" v-model="pickedGender">
-        <label for="Female">Female</label>
-
-        <input type="radio" id="Undisclosed" value="Undisclosed" v-model="pickedGender">
-        <label for="Undisclosed">Undisclosed</label>
-      </div>
-      <br>
-
-      <!-- Birthday input -->
-      <label for="birthday" class="form-label">Birthday</label>
-      <div id="birthday">
-        <input type="date" name="" id="" v-model="date">
-      </div>
-      <div class="form-text hide" :class="{'validation': !validateAge}">You should be 18 years old to register</div>
-      <br><br>
-
-      <!-- Terms input -->
-      
-      <div class="mb-3 form-check">
-          <input type="checkbox" id="checkbox-terms" v-model="checkedTerms">
-          <label for="checkbox"> I accept terms of use </label>
-      </div>
-      <div class="form-text hide" :class="{'validation': !acceptTerms}">You must accept Terms of Use to register</div>
-
-      <!-- Mailing List input -->
-      <div class="mb-3 form-check">
-        <input type="checkbox" id="checkbox-maillist" v-model="checkedMailing">
-        <label for="checkbox">Add me to mailing list</label>
-      </div>
-      <br>
-
-      <!-- Submit form -->
-      <div @click="validate()" class="btn btn-primary">Sign Up</div>
-    </form>
+        <form>
+    
+          <!-- Email input -->
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input v-model.lazy:value="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text hide" :class="{'validation': !validateEmail}">Please provide valid email</div>
+          </div>
+    
+          <!-- Password input -->
+          <div class="mb-3">
+            
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+    
+            <input v-model:value="password" type="password" class="form-control" id="exampleInputPassword1">
+            <div class="form-text hide" :class="{'validation': !passwordLength}">Password should be maore than 5 characters long</div>
+            <br>
+            <label for="exampleInputPassword2" class="form-label">Re-type Password</label>
+            <input v-model:value="password2" type="password" class="form-control" id="exampleInputPassword2">
+            <div class="form-text hide" :class="{'validation': !passwordMatch}">Passwords should be the same</div>
+    
+          </div>
+    
+          <!-- Country input -->
+          <label for="country" class="form-label">Where are you from?</label>
+          <div id="country">
+            <select v-model="selected" id="select">
+              <option selected="selected" disabled>Select Country</option>
+              <option v-for="(value, idx) in countries" :key="idx">{{ value.name }}</option>
+            </select>
+          </div>
+          <br>
+    
+          <!-- Gender input -->
+          <label for="gender" class="form-label">Gender</label>
+          <div id="gender">
+            <input type="radio" id="Male" value="Male" v-model="pickedGender">
+            <label for="Male">Male</label>
+    
+            <input type="radio" id="Female" value="Female" v-model="pickedGender">
+            <label for="Female">Female</label>
+    
+            <input type="radio" id="Undisclosed" value="Undisclosed" v-model="pickedGender">
+            <label for="Undisclosed">Undisclosed</label>
+          </div>
+          <br>
+    
+          <!-- Birthday input -->
+          <label for="birthday" class="form-label">Birthday</label>
+          <div id="birthday">
+            <input type="date" name="" id="" v-model="date">
+          </div>
+          <div class="form-text hide" :class="{'validation': !validateAge}">You should be 18 years old to register</div>
+          <br><br>
+    
+          <!-- Terms input -->
+          
+          <div class="mb-3 form-check">
+              <input type="checkbox" id="checkbox-terms" v-model="checkedTerms">
+              <label for="checkbox"> I accept terms of use </label>
+          </div>
+          <div class="form-text hide" :class="{'validation': !acceptTerms}">You must accept Terms of Use to register</div>
+    
+          <!-- Mailing List input -->
+          <div class="mb-3 form-check">
+            <input type="checkbox" id="checkbox-maillist" v-model="checkedMailing">
+            <label for="checkbox">Add me to mailing list</label>
+          </div>
+          <br>
+    
+          <!-- Submit form -->
+          <div @click="validate()" class="btn btn-primary">Sign Up</div>
+        </form>
+    </div>
   </div>
   
 </body>
